@@ -10,7 +10,7 @@ const mereRouter = require('./routes/mere');
 // her henter vi alle vores templates
 app.set('view engine', 'pug'); // fortæller hvilken type vores templates, nemlig pug
 app.set('views', __dirname + '/views'); //fortæller hvor vi har vores templates
-//middlevare
+//middleware
 app.use('/', indexRouter);
 app.use('/', mereRouter);
 
