@@ -7,10 +7,15 @@ const app = express(); //initialiser express
 
 const indexRouter = require('./routes/index');
 const mereRouter = require('./routes/mere');
+const bodyParser = require('body-parser');
+
 // her henter vi alle vores templates
 app.set('view engine', 'pug'); // fortæller hvilken type vores templates, nemlig pug
 app.set('views', __dirname + '/views'); //fortæller hvor vi har vores templates
 //middleware
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use('/', indexRouter);
 app.use('/', mereRouter);
 

@@ -13,4 +13,8 @@ router.get('/funny', (req, res) => {
   });
 });
 
+router.post('/', (req, res) => {
+  console.log(req.body.Joke);
+});
+
 module.exports = router;
