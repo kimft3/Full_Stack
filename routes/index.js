@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+let Mere = require('../models/Mere');
 
 router.get('/', (req, res) => {
   res.render('index', {
@@ -14,7 +15,10 @@ router.get('/funny', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  console.log(req.body.Joke);
+  let mere = new Mere();
+  mere.story = req.body.Joke;
+  mere.punchLine = req.body.Punchline;
+  mere.save();
 });
 
 module.exports = router;
