@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
 router.get('/funny', (req, res) => {
   res.render('index', {
-    enVariabel: 'sig funny zarathustra',
+    enVariabel: 'sig so so funny zarathustra',
   });
 });
 
