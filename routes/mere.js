@@ -7,4 +7,10 @@ router.get('/mere', (req, res) => {
   });
 });
 
+router.get('/mere/2', (req, res) => {
+  res.render('mere', {
+    enVariabel: 'sig zarathustra igen3',
+  });
+});
+
 module.exports = router;
